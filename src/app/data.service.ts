@@ -11,6 +11,7 @@ export class DataService {
   private readonly baseUrl = 'http://104.211.60.175/request_API/public/api/login';
   private readonly Rurl = 'http://104.211.60.175/request_API/public/api/register';
   private readonly Qurl = 'http://104.211.60.175/request_API/public/api/request_ride';
+  private readonly Fl = 'assets/history.json'
 
   headers = new HttpHeaders().set('Content-Type', 'application/json')
   .set('Accept', 'application/json')
@@ -40,5 +41,7 @@ export class DataService {
     Request(data:any){
       return this.http.post(this.Qurl, JSON.stringify(data), ({headers: this.headers}));
     }
+
+    
 
 }

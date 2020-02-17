@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">Schedule</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <mat-card>
+    <mat-card-content>
+<div class="form"> 
+  <mat-form-field>
+    <input matInput placeholder="place">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Number">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Reason">
+  </mat-form-field>
+
+
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  
+  
+</div>
+</mat-card-content>
+</mat-card>
+</ion-content>

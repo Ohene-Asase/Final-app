@@ -10,10 +10,10 @@ const routes: Routes = [
     loadChildren: () => import('./sign-up/sign-up.module').then( m => m.SignUpPageModule)
   },
   { path: '', loadChildren: './main/main.module#MainPageModule' },
-  {
-    path: 'driver',
-    loadChildren: () => import('./driver/driver.module').then( m => m.DriverPageModule)
-  }
+
+ 
+  
+ 
  
 ];
 

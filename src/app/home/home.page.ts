@@ -35,10 +35,16 @@ export class HomePage {
   (res: any) => {
     if (res) {
       this.router.navigate(['../main/tab1']);
+     /* if(res.data.role_id==2){
+        this.router.navigate(['../driver/tab4']);
+      }  */
+
       localStorage.setItem('userData',res.data.token) 
       localStorage.setItem('id', res.data.id); 
       console.log(res.data.token);
       console.log(res.data.id);
+      console.log(res.data.role_id)
+      
 }
   },
   async (error) => {
