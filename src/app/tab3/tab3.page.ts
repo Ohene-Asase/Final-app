@@ -20,7 +20,7 @@ export class Tab3Page implements OnInit {
     .subscribe(data => {
       this.spinner= false;
       this.display = data;
-      this.Dab = new MatTableDataSource(this.display.data)
+      this.Dab = new MatTableDataSource(this.display)
       this.Dab.paginator = this.paginator
 
     })

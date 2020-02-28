@@ -39,10 +39,13 @@ private readonly _HUl = "http://104.211.60.175/request_API/public/api/trip_histo
 
 
     Registor(data: any){
+      // data['appuser_id'] = this.riderid;
+      console.log(data);
       return this.http.post(this.Rurl, JSON.stringify(data),({headers: this.headers}));
     }
 
     Request(data:any){
+      console.log(data);
       return this.http.post(this.Qurl, JSON.stringify(data), ({headers: this.headers}));
     }
 

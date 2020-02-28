@@ -36,11 +36,11 @@ time = this.today.getTime()
   
   requestForm = this.formBuilder.group({
     destination: new FormControl('', Validators.required),
-    date: new Date(this.year),
+    date: new FormControl(''),
     purpose: new FormControl('', Validators.required),
     no_of_people: new FormControl('',Validators.required),
-    due_time: new Date(this.time), 
-    appuser_id: new FormControl(this.data,Validators.required), 
+    due_time: new FormControl(''), 
+    // appuser_id: new FormControl(localStorage.getItem('id'),Validators.required), 
   });
    
 
@@ -51,9 +51,12 @@ time = this.today.getTime()
    
   }
 
-requestDriver(requestDetails:any){
+ requestDriver(requestDetails:any){
   console.log(requestDetails);
-  console.log(this.data)
+  requestDetails['appuser_id'] = localStorage.getItem('id');
+  requestDetails['date'] = moment(requestDetails['date']).format('YYYY-MM-DD');
+  requestDetails['due_time'] = moment(requestDetails['due_time']).format('HH:m');
+  // console.log(this.data)
   
   this._dataservice.Request(requestDetails).subscribe(
     async (res:any) => {
