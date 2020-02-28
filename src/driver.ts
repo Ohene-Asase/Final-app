@@ -4,3 +4,11 @@ export interface IHistory{
     reason: string,
     Date: string
 }
+
+
+export interface IReal {
+    name: string,
+    destination:string,
+    purpose:string,
+    data:string
+}

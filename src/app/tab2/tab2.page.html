@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title style="text-align: center;">R-driver</ion-title>
+
+   <ion-title style="text-align: center;">R-driver</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,26 +11,23 @@
   <br>
   <ion-card>
     <ion-item>
-      <ion-label position="floating">New Email</ion-label>
+      <ion-label position="floating">Current password</ion-label>
       <ion-input type="text"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">New Password</ion-label>
+      <ion-label position="floating">New password</ion-label>
       <ion-input type="text"></ion-input>
     </ion-item>
-
     <ion-item>
-      <ion-label position="floationg">Date</ion-label>
-      <ion-datetime  display-format="D, MMMM YYYY" [min]="minDate" ></ion-datetime>
+      <ion-label position="floating">Confirm new password</ion-label>
+      <ion-input type="text"></ion-input>
     </ion-item>
-
-  
-      <ion-item>
-      <ion-label position="floating">Time</ion-label>
-      <ion-datetime  display-format="hh mm A"></ion-datetime>
-      </ion-item>
+ 
   </ion-card>
 
-<ion-button color="primary"  expand="block">Schedule</ion-button>
+  <br>
+  <br>
+
+<ion-button color="primary"  expand="block">Change Details</ion-button>
 </ion-content>

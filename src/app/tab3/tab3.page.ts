@@ -10,17 +10,17 @@ export class Tab3Page implements OnInit {
   public display= [];
   spinner= true;
   Dab: MatTableDataSource<any>
-  displayedColumns: string[] = ['Name', 'Location', 'Reason', 'Number', 'Date Requested'];
+  displayedColumns: string[] = ['Location', 'Reason', 'Date',];
   @ViewChild(MatPaginator, {static:false}) paginator: MatPaginator;
 
   constructor(private _dataservice:DataService) { }
 
   ngOnInit() {
-    this._dataservice.getHistory()
+    this._dataservice.getRhistory()
     .subscribe(data => {
       this.spinner= false;
       this.display = data;
-      this.Dab = new MatTableDataSource(this.display)
+      this.Dab = new MatTableDataSource(this.display.data)
       this.Dab.paginator = this.paginator
 
     })

@@ -44,6 +44,7 @@ export class HomePage {
       console.log(res.data.token);
       console.log(res.data.id);
       console.log(res.data.role_id)
+      this.resetForm()
       
 }
   },
@@ -85,6 +86,9 @@ logout(){
 
 
 
+resetForm(){
+  this.signedin.reset();
+}
 
 
 

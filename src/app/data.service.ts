@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { IHistory } from 'src/driver';
+import { IHistory, IReal } from 'src/driver';
 import { Observable, BehaviorSubject, Subject, of } from 'rxjs';
 import { HttpHeaders, HttpErrorResponse, HttpClient } from '@angular/common/http';
 @Injectable({
@@ -11,8 +11,12 @@ export class DataService {
   private readonly baseUrl = 'http://104.211.60.175/request_API/public/api/login';
   private readonly Rurl = 'http://104.211.60.175/request_API/public/api/register';
   private readonly Qurl = 'http://104.211.60.175/request_API/public/api/request_ride';
+
   private readonly Fl = 'assets/history.json'
 
+  riderid = localStorage.getItem('id');
+  
+private readonly _HUl = "http://104.211.60.175/request_API/public/api/trip_history";
   headers = new HttpHeaders().set('Content-Type', 'application/json')
   .set('Accept', 'application/json')
   .set('responseType', 'text')
@@ -42,6 +46,8 @@ export class DataService {
       return this.http.post(this.Qurl, JSON.stringify(data), ({headers: this.headers}));
     }
 
-    
+   getRhistory(): Observable<IReal[]>{
+     return this.http.get<IReal[]>(`${this._HUl}/${this.riderid}`);
+   }   
 
 }
