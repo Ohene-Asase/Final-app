@@ -40,7 +40,7 @@ export class HomePage {
       }  */
 
       localStorage.setItem('userData',res.data.token) 
-      localStorage.setItem('id', res.data.id); 
+      localStorage.setItem('user_id', res.data.id); 
       console.log(res.data.token);
       console.log(res.data.id);
       console.log(res.data.role_id)

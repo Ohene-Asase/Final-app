@@ -16,7 +16,7 @@ export class DataService {
 
   riderid = localStorage.getItem('id');
   
-private readonly _HUl = "http://104.211.60.175/request_API/public/api/trip_history";
+private readonly _HUl = " http://104.211.60.175/request_API/public/api/new_trip_s";
   headers = new HttpHeaders().set('Content-Type', 'application/json')
   .set('Accept', 'application/json')
   .set('responseType', 'text')
